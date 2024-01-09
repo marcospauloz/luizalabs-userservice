@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "luizalabs.UserService.API", "luizalabs.UserService.API\luizalabs.UserService.API.csproj", "{5337F63B-EB37-4E27-A1F4-F05715FBF499}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. API", "1. API", "{2A18E8F4-D7AF-4507-8B27-9ECD65BE9534}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Domain", "2. Domain", "{3BCFE351-9E31-4A5E-A1C4-6DD2A3E6A836}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Infrastructure", "3. Infrastructure", "{2A8305C1-C0D4-4278-8523-DA4A303366A8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "luizalabs.UserService.Application", "luizalabs.UserService.Application\luizalabs.UserService.Application.csproj", "{42B7799D-CF36-4F0A-8DC3-2BCF74C000ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "luizalabs.UserService.Domain", "luizalabs.UserService.Domain\luizalabs.UserService.Domain.csproj", "{53E9891E-CD42-47A2-BD6D-01D76BDA3BF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luizalabs.UserService.Infrastructure", "luizalabs.UserService.Infrastructure\luizalabs.UserService.Infrastructure.csproj", "{1D6D49E6-E1F3-44C9-B9FB-7E12D1F76ED0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5337F63B-EB37-4E27-A1F4-F05715FBF499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5337F63B-EB37-4E27-A1F4-F05715FBF499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5337F63B-EB37-4E27-A1F4-F05715FBF499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5337F63B-EB37-4E27-A1F4-F05715FBF499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42B7799D-CF36-4F0A-8DC3-2BCF74C000ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42B7799D-CF36-4F0A-8DC3-2BCF74C000ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42B7799D-CF36-4F0A-8DC3-2BCF74C000ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42B7799D-CF36-4F0A-8DC3-2BCF74C000ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53E9891E-CD42-47A2-BD6D-01D76BDA3BF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53E9891E-CD42-47A2-BD6D-01D76BDA3BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53E9891E-CD42-47A2-BD6D-01D76BDA3BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53E9891E-CD42-47A2-BD6D-01D76BDA3BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D6D49E6-E1F3-44C9-B9FB-7E12D1F76ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D6D49E6-E1F3-44C9-B9FB-7E12D1F76ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D6D49E6-E1F3-44C9-B9FB-7E12D1F76ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D6D49E6-E1F3-44C9-B9FB-7E12D1F76ED0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5337F63B-EB37-4E27-A1F4-F05715FBF499} = {2A18E8F4-D7AF-4507-8B27-9ECD65BE9534}
+		{42B7799D-CF36-4F0A-8DC3-2BCF74C000ED} = {3BCFE351-9E31-4A5E-A1C4-6DD2A3E6A836}
+		{53E9891E-CD42-47A2-BD6D-01D76BDA3BF0} = {3BCFE351-9E31-4A5E-A1C4-6DD2A3E6A836}
+		{1D6D49E6-E1F3-44C9-B9FB-7E12D1F76ED0} = {2A8305C1-C0D4-4278-8523-DA4A303366A8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F85741BE-26F1-49D9-AC6D-859FE5DECED6}
+	EndGlobalSection
+EndGlobal
