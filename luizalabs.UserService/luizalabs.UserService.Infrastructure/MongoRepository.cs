@@ -1,58 +1,53 @@
-﻿namespace Dotnet.MiniJira.Infrastructure;
+﻿namespace luizalabs.UserService.Infrastructure;
 
-using luizalabs.UserService.Application.Interface.Repository;
-using luizalabs.UserService.Domain.Core;
-using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Threading;
-using System.Threading.Tasks;
-
+using Application.Interface.Repository;
+using Domain.Core;
+using MongoDB.Driver;
 
 public class MongoBaseRepository<T> : IBaseRepository<T> where T : Entity
 {
-    protected readonly IMongoClient Client;
+    private readonly IMongoClient _client;
 
-    protected readonly IMongoCollection<T> Collection;
+    private readonly IMongoCollection<T> _collection;
 
     public MongoBaseRepository(IMongoClient client)
     {
-        Client = client;
+        _client = client;
 
-        Collection = client
+        _collection = client
             .GetDatabase("luizalabsUserService")
             .GetCollection<T>(typeof(T).Name);
     }
 
     public virtual async Task AddAsync(T obj, CancellationToken cancellationToken)
     {
-        await Collection.InsertOneAsync(obj, cancellationToken: cancellationToken);
+        await _collection.InsertOneAsync(obj, cancellationToken: cancellationToken);
     }
 
     public virtual async Task UpdateAsync(T obj, CancellationToken cancellationToken)
     {
-        await Collection.ReplaceOneAsync(x => x.Id == obj.Id, obj, cancellationToken: cancellationToken);
+        await _collection.ReplaceOneAsync(x => x.Id == obj.Id, obj, cancellationToken: cancellationToken);
     }
 
     public virtual async Task<T> GetByIdAsync(string id, CancellationToken cancellationToken)
     {
-        return await Collection.Find(Builders<T>.Filter.Eq(x => x.Id, id.ToString()))
+        return await _collection.Find(Builders<T>.Filter.Eq(x => x.Id, id.ToString()))
             .SingleOrDefaultAsync(cancellationToken);
     }
 
     public virtual async Task DeleteAsync(string id, CancellationToken cancellationToken)
     {
-        await Collection.DeleteOneAsync(x => x.Id == id.ToString(), cancellationToken);
+        await _collection.DeleteOneAsync(x => x.Id == id.ToString(), cancellationToken);
     }
 
     public virtual async Task<List<T>> FindAsync(Expression<Func<T, bool>> filter, CancellationToken cancellationToken)
     {
-        return await Collection.Find(filter).ToListAsync(cancellationToken);
+        return await _collection.Find(filter).ToListAsync(cancellationToken);
     }
 
     public virtual Task<IClientSessionHandle> StartSessionAsync(CancellationToken cancellationToken)
     {
-        return Client.StartSessionAsync(cancellationToken: cancellationToken);
+        return _client.StartSessionAsync(cancellationToken: cancellationToken);
     }
 }

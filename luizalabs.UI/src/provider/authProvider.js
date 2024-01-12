@@ -10,7 +10,6 @@ import {
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-    // Component content goes here
     const [token, setToken_] = useState(localStorage.getItem("token"));
 
     const setToken = (newToken) => {

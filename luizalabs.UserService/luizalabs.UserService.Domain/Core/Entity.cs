@@ -1,7 +1,7 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+﻿namespace luizalabs.UserService.Domain.Core;
 
-namespace luizalabs.UserService.Domain.Core;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 public abstract class Entity
 {

@@ -10,12 +10,8 @@ const Routes = () => {
 
     const routesForPublic = [
         {
-            path: "/service",
-            element: <div>Service Page</div>,
-        },
-        {
             path: "/about-us",
-            element: <div>About Us</div>,
+            element: <div>Sobre nós!</div>,
         },
     ];
 
@@ -27,10 +23,6 @@ const Routes = () => {
                 {
                     path: "/",
                     element: <Home />,
-                },
-                {
-                    path: "/profile",
-                    element: <div>User Profile</div>,
                 },
                 {
                     path: "/logout",

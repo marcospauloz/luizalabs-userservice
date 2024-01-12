@@ -1,7 +1,7 @@
 namespace luizalabs.UserService.API;
 
-using luizalabs.UserService.API.Extensions;
-using luizalabs.UserService.API.Middleware;
+using Extensions;
+using Middleware;
 
 public class Program
 {
@@ -20,18 +20,16 @@ public class Program
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
-        }
+        app.UseSwagger();
+        app.UseSwaggerUI();
 
         app.UseCors(x => x
-                .SetIsOriginAllowed(origin => true)
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .AllowCredentials());
+            .SetIsOriginAllowed(origin => true)
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials());
 
+        app.UseMiddleware<ErrorHandlerMiddleware>();
         app.UseMiddleware<JwtMiddleware>();
 
         app.MapControllers();

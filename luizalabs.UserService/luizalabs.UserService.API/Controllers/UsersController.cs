@@ -1,9 +1,8 @@
 ﻿namespace luizalabs.UserService.API.Controllers;
 
-using Dotnet.MiniJira.Domain.Models.Users;
-using luizalabs.UserService.API.Authorization;
-using luizalabs.UserService.Application.Interface.Service;
-using luizalabs.UserService.Domain.Models.Users;
+using Authorization;
+using Application.Interface.Service;
+using Domain.Models.Users;
 using Microsoft.AspNetCore.Mvc;
 
 [Authorize]
@@ -11,18 +10,18 @@ using Microsoft.AspNetCore.Mvc;
 [ApiController]
 public class UsersController : ControllerBase
 {
-    private readonly IUserService userService;
+    private readonly IUserService _userService;
 
     public UsersController(IUserService userService)
     {
-        this.userService = userService;
+        _userService = userService;
     }
 
     [AllowAnonymous]
     [HttpPost("authenticate")]
     public async Task<IActionResult> Authenticate(AuthenticateRequest model)
     {
-        var response = await userService.AuthenticateAsync(model, HttpContext.RequestAborted);
+        var response = await _userService.AuthenticateAsync(model, HttpContext.RequestAborted);
         return Ok(response);
     }
 
@@ -30,8 +29,8 @@ public class UsersController : ControllerBase
     [HttpPost("create")]
     public async Task<IActionResult> CreateUser(CreateUserRequest model)
     {
-        await userService.CreateUserAsync(model, HttpContext.RequestAborted);
-        var response = await userService.AuthenticateAsync(
+        await _userService.CreateUserAsync(model, HttpContext.RequestAborted);
+        var response = await _userService.AuthenticateAsync(
             new AuthenticateRequest
             {
                 Password = model.Password,
@@ -44,7 +43,7 @@ public class UsersController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(string id)
     {
-        var user = await userService.GetByIdAsync(id, HttpContext.RequestAborted);
+        var user = await _userService.GetByIdAsync(id, HttpContext.RequestAborted);
         return Ok(user);
     }
 }

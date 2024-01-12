@@ -1,6 +1,6 @@
 namespace luizalabs.UserService.API.Middleware;
 
-using luizalabs.UserService.Application.Interface.Service;
+using Application.Interface.Service;
 
 public class JwtMiddleware
 {

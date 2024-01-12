@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "luizalabs.UserService.Domai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luizalabs.UserService.Infrastructure", "luizalabs.UserService.Infrastructure\luizalabs.UserService.Infrastructure.csproj", "{1D6D49E6-E1F3-44C9-B9FB-7E12D1F76ED0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Tests", "4. Tests", "{A39B80AB-B36A-45F4-BB1D-30E8258DABE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luizalabs.UserService.Tests", "luizalabs.UserService.Tests\luizalabs.UserService.Tests.csproj", "{1E8F009A-DDE0-43A4-8F18-49EC46364C9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,10 @@ Global
 		{1D6D49E6-E1F3-44C9-B9FB-7E12D1F76ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D6D49E6-E1F3-44C9-B9FB-7E12D1F76ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D6D49E6-E1F3-44C9-B9FB-7E12D1F76ED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E8F009A-DDE0-43A4-8F18-49EC46364C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E8F009A-DDE0-43A4-8F18-49EC46364C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E8F009A-DDE0-43A4-8F18-49EC46364C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E8F009A-DDE0-43A4-8F18-49EC46364C9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +56,7 @@ Global
 		{42B7799D-CF36-4F0A-8DC3-2BCF74C000ED} = {3BCFE351-9E31-4A5E-A1C4-6DD2A3E6A836}
 		{53E9891E-CD42-47A2-BD6D-01D76BDA3BF0} = {3BCFE351-9E31-4A5E-A1C4-6DD2A3E6A836}
 		{1D6D49E6-E1F3-44C9-B9FB-7E12D1F76ED0} = {2A8305C1-C0D4-4278-8523-DA4A303366A8}
+		{1E8F009A-DDE0-43A4-8F18-49EC46364C9A} = {A39B80AB-B36A-45F4-BB1D-30E8258DABE5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F85741BE-26F1-49D9-AC6D-859FE5DECED6}

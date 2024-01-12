@@ -1,6 +1,6 @@
 namespace luizalabs.UserService.API.Authorization;
 
-using luizalabs.UserService.Domain.Entities;
+using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 

@@ -17,6 +17,10 @@
   padding: 0 5%;
 }
 
+.FormGroup {
+  display: flex;
+  flex-direction: column;
+}
 
 .FormGroup-label {
   display: inline-flex;
@@ -44,6 +48,12 @@
   padding-top: 10px;
 }
 
+.FormGroup>.errorLabel {
+  color: red;
+  font-size: 12px;
+  text-align: center;
+}
+
 .LoginBox-form-continue {
   border-radius: 4px;
   border: 0;
@@ -55,6 +65,11 @@
   text-align: center;
   text-decoration: none;
   margin-left: 6%;
+  cursor: pointer;
+}
+
+.LoginBox-form-continue:hover {
+  background-color: #3a9b14;
 }
 
 .resultContainer,
@@ -66,37 +81,6 @@
   justify-content: space-between;
 }
 
-.historyContainer {
-  flex-direction: column;
-  display: flex;
-  height: 200px;
-  align-items: center;
-  flex-grow: 5;
-  justify-content: flex-start;
-}
-
-.buttonContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 260px;
-}
-
-.inputContainer>.errorLabel {
-  color: red;
-  font-size: 12px;
-}
-
-.inputBox {
-  height: 48px;
-  width: 400px;
-  font-size: large;
-  border-radius: 8px;
-  border: 1px solid grey;
-  padding-left: 8px;
-}
-
 .LoginPage-title {
   padding-top: 20px;
   padding-left: 10px;
@@ -104,13 +88,6 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 48px;
-}
-
-.LoginBox-title {
-  margin-bottom: 20px;
-  margin-left: 182px;
-  font-size: 18px;
-  font-weight: 700;
 }
 
 .titleContainer {

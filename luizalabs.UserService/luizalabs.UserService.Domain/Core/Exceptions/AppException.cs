@@ -1,4 +1,4 @@
-namespace Dotnet.MiniJira.Domain.Helpers;
+namespace luizalabs.UserService.Domain.Core.Exceptions;
 
 using System.Globalization;
 

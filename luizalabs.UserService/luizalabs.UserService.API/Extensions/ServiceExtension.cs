@@ -1,11 +1,14 @@
 ﻿namespace luizalabs.UserService.API.Extensions;
 
-using Dotnet.MiniJira.Infrastructure;
-using luizalabs.UserService.Application;
-using luizalabs.UserService.Application.Interface.Repository;
-using luizalabs.UserService.Application.Interface.Service;
-using luizalabs.UserService.Domain.Settings;
+using Application;
+using Application.Interface.Repository;
+using Application.Interface.Service;
+using Domain.Settings;
 using MongoDB.Driver;
+using FluentValidation;
+using Domain.Models.Users;
+using Domain.Validation;
+using Infrastructure;
 
 public static class ServiceExtension
 {
@@ -19,5 +22,7 @@ public static class ServiceExtension
 
         services.AddSingleton<IJwtService, JwtService>();
         services.AddSingleton<IUserService, UserService>();
+        
+        services.AddTransient<IValidator<CreateUserRequest>, CreateUserRequestValidator>();
     }
 }

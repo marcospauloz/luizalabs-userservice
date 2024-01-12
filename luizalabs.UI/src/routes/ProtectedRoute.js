@@ -3,14 +3,10 @@ import { useAuth } from "../provider/authProvider";
 
 export const ProtectedRoute = () => {
     const { token } = useAuth();
-    console.log('token');
-    console.log(token);
-    // Check if the user is authenticated
+    
     if (!token) {
-      // If not authenticated, redirect to the login page
       return <Navigate to="/login" />;
     }
-  
-    // If authenticated, render the child routes TODO: CHANGE THIS
+    
     return <Outlet />;
   };

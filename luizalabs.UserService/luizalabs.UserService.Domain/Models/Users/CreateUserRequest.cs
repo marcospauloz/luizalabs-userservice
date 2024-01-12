@@ -1,4 +1,4 @@
-namespace Dotnet.MiniJira.Domain.Models.Users;
+namespace luizalabs.UserService.Domain.Models.Users;
 
 public class CreateUserRequest
 {

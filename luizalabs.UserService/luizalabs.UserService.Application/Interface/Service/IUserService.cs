@@ -1,8 +1,7 @@
 ﻿namespace luizalabs.UserService.Application.Interface.Service;
 
-using Dotnet.MiniJira.Domain.Models.Users;
-using luizalabs.UserService.Domain.Entities;
-using luizalabs.UserService.Domain.Models.Users;
+using Domain.Entities;
+using Domain.Models.Users;
 
 public interface IUserService
 {

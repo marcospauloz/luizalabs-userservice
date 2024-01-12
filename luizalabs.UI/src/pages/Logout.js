@@ -10,11 +10,10 @@ const Logout = () => {
     navigate("/", { replace: true });
   };
 
-  setTimeout(() => {
-    handleLogout();
-  }, 3 * 1000);
-
-  return <>Logout Page</>;
+  return (
+    <div className={"inputContainer"}>
+      <button className={"LoginBox-form-continue"} onClick={handleLogout}>Sair</button>
+    </div>);
 };
 
 export default Logout;

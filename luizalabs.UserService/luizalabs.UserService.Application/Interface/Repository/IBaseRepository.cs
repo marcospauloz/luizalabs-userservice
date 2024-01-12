@@ -1,6 +1,6 @@
 ﻿namespace luizalabs.UserService.Application.Interface.Repository;
 
-using luizalabs.UserService.Domain.Core;
+using Domain.Core;
 using System.Linq.Expressions;
 
 public interface IBaseRepository<T> where T : Entity

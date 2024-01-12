@@ -1,7 +1,7 @@
-﻿using luizalabs.UserService.Domain.Entities;
-using System.Text.Json.Serialization;
+﻿namespace luizalabs.UserService.Domain.Models.Users;
 
-namespace luizalabs.UserService.Domain.Models.Users;
+using Entities;
+using System.Text.Json.Serialization;
 
 public class AuthenticatedResponse
 {
